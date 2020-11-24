@@ -1,0 +1,15 @@
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\Falcon.exe.config
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\Falcon.exe
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\Falcon.pdb
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csprojAssemblyReference.cache
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Properties.Resources.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csproj.GenerateResource.cache
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csproj.CoreCompileInputs.cache
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.exe
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.pdb
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Paqueteria.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Login.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Principal.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Pruebas.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Consultas_prueba.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Consultas_paquetería.resources
