@@ -33,15 +33,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.hasta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.desde = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_consultas2 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_consultas2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // button1
             // 
@@ -66,6 +67,7 @@
             this.button1.TabIndex = 29;
             this.button1.Text = "BUSCAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -78,24 +80,27 @@
             this.button3.TabIndex = 28;
             this.button3.Text = "GENERAR REPORTE";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Controls.Add(this.hasta);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.desde);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(10, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 43);
             this.panel1.TabIndex = 25;
             // 
-            // dateTimePicker2
+            // hasta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(356, 8);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 14;
+            this.hasta.CustomFormat = "yyyy-MM-dd";
+            this.hasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.hasta.Location = new System.Drawing.Point(356, 8);
+            this.hasta.Name = "hasta";
+            this.hasta.Size = new System.Drawing.Size(200, 20);
+            this.hasta.TabIndex = 14;
             // 
             // label2
             // 
@@ -108,12 +113,14 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "AL:";
             // 
-            // dateTimePicker1
+            // desde
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(99, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.desde.CustomFormat = "yyyy-MM-dd";
+            this.desde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.desde.Location = new System.Drawing.Point(99, 10);
+            this.desde.Name = "desde";
+            this.desde.Size = new System.Drawing.Size(200, 20);
+            this.desde.TabIndex = 12;
             // 
             // label1
             // 
@@ -126,13 +133,14 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "PERIODO:";
             // 
-            // dataGridView1
+            // dgv_consultas2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 178);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(724, 243);
-            this.dataGridView1.TabIndex = 24;
+            this.dgv_consultas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_consultas2.Location = new System.Drawing.Point(10, 178);
+            this.dgv_consultas2.Name = "dgv_consultas2";
+            this.dgv_consultas2.Size = new System.Drawing.Size(724, 243);
+            this.dgv_consultas2.TabIndex = 24;
+            this.dgv_consultas2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -154,7 +162,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_consultas2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultas_paquetería";
@@ -163,7 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_consultas2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -175,11 +183,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker hasta;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker desde;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_consultas2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

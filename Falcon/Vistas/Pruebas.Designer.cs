@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebas));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel_menus = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_pruebas = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.bnt_agregar = new System.Windows.Forms.Button();
@@ -56,11 +56,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel_menus = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel_menus.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_pruebas)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel_menus.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -83,22 +84,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel_menus
-            // 
-            this.panel_menus.BackColor = System.Drawing.Color.Black;
-            this.panel_menus.Controls.Add(this.flowLayoutPanel1);
-            this.panel_menus.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_menus.Location = new System.Drawing.Point(0, 0);
-            this.panel_menus.Name = "panel_menus";
-            this.panel_menus.Size = new System.Drawing.Size(116, 459);
-            this.panel_menus.TabIndex = 21;
-            this.panel_menus.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.GhostWhite;
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgv_pruebas);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -108,6 +98,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(773, 459);
             this.panel2.TabIndex = 22;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox4
             // 
@@ -120,59 +111,77 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // dataGridView1
+            // dgv_pruebas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 251);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(727, 205);
-            this.dataGridView1.TabIndex = 5;
+            this.dgv_pruebas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_pruebas.Location = new System.Drawing.Point(19, 251);
+            this.dgv_pruebas.Name = "dgv_pruebas";
+            this.dgv_pruebas.Size = new System.Drawing.Size(727, 205);
+            this.dgv_pruebas.TabIndex = 5;
+            this.dgv_pruebas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_pruebas_CellContentClick);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.btn_actualizar);
             this.panel6.Controls.Add(this.btn_limpiar);
             this.panel6.Controls.Add(this.btn_eliminar);
             this.panel6.Controls.Add(this.bnt_agregar);
-            this.panel6.Location = new System.Drawing.Point(570, 103);
+            this.panel6.Location = new System.Drawing.Point(582, 103);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(176, 145);
+            this.panel6.Size = new System.Drawing.Size(164, 145);
             this.panel6.TabIndex = 4;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.BackColor = System.Drawing.Color.Black;
+            this.btn_actualizar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_actualizar.ForeColor = System.Drawing.Color.White;
+            this.btn_actualizar.Location = new System.Drawing.Point(3, 75);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(88, 34);
+            this.btn_actualizar.TabIndex = 4;
+            this.btn_actualizar.Text = "Visualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = false;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_limpiar
             // 
             this.btn_limpiar.BackColor = System.Drawing.Color.Black;
             this.btn_limpiar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
-            this.btn_limpiar.Location = new System.Drawing.Point(20, 50);
+            this.btn_limpiar.Location = new System.Drawing.Point(3, 38);
             this.btn_limpiar.Name = "btn_limpiar";
-            this.btn_limpiar.Size = new System.Drawing.Size(140, 34);
+            this.btn_limpiar.Size = new System.Drawing.Size(88, 34);
             this.btn_limpiar.TabIndex = 3;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = false;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
             // btn_eliminar
             // 
             this.btn_eliminar.BackColor = System.Drawing.Color.Black;
             this.btn_eliminar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_eliminar.Location = new System.Drawing.Point(20, 92);
+            this.btn_eliminar.Location = new System.Drawing.Point(3, 111);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(140, 34);
+            this.btn_eliminar.Size = new System.Drawing.Size(88, 34);
             this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // bnt_agregar
             // 
             this.bnt_agregar.BackColor = System.Drawing.Color.Black;
             this.bnt_agregar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnt_agregar.ForeColor = System.Drawing.Color.White;
-            this.bnt_agregar.Location = new System.Drawing.Point(20, 10);
+            this.bnt_agregar.Location = new System.Drawing.Point(3, 1);
             this.bnt_agregar.Name = "bnt_agregar";
-            this.bnt_agregar.Size = new System.Drawing.Size(140, 34);
+            this.bnt_agregar.Size = new System.Drawing.Size(88, 34);
             this.bnt_agregar.TabIndex = 1;
             this.bnt_agregar.Text = "Agregar";
             this.bnt_agregar.UseVisualStyleBackColor = false;
+            this.bnt_agregar.Click += new System.EventHandler(this.bnt_agregar_Click);
             // 
             // panel5
             // 
@@ -184,9 +193,9 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.tb_id);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(19, 103);
+            this.panel5.Location = new System.Drawing.Point(66, 103);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(545, 145);
+            this.panel5.Size = new System.Drawing.Size(510, 145);
             this.panel5.TabIndex = 3;
             // 
             // tb_cantidad
@@ -210,6 +219,8 @@
             // cb_tipoprueba
             // 
             this.cb_tipoprueba.FormattingEnabled = true;
+            this.cb_tipoprueba.Items.AddRange(new object[] {
+            "VIH"});
             this.cb_tipoprueba.Location = new System.Drawing.Point(165, 76);
             this.cb_tipoprueba.Name = "cb_tipoprueba";
             this.cb_tipoprueba.Size = new System.Drawing.Size(162, 21);
@@ -228,10 +239,13 @@
             // 
             // dt_fecha
             // 
+            this.dt_fecha.CustomFormat = "yyyy-MM-dd";
+            this.dt_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_fecha.Location = new System.Drawing.Point(165, 43);
             this.dt_fecha.Name = "dt_fecha";
-            this.dt_fecha.Size = new System.Drawing.Size(243, 20);
+            this.dt_fecha.Size = new System.Drawing.Size(100, 20);
             this.dt_fecha.TabIndex = 6;
+            this.dt_fecha.Value = new System.DateTime(2020, 11, 24, 18, 49, 31, 0);
             this.dt_fecha.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
@@ -251,6 +265,7 @@
             this.tb_id.Name = "tb_id";
             this.tb_id.Size = new System.Drawing.Size(102, 20);
             this.tb_id.TabIndex = 4;
+            this.tb_id.TextChanged += new System.EventHandler(this.tb_id_TextChanged);
             // 
             // label2
             // 
@@ -277,9 +292,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 9);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 28);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -336,6 +351,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Consultas";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // panel4
             // 
@@ -345,6 +361,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(92, 46);
             this.panel4.TabIndex = 3;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // button3
             // 
@@ -353,10 +370,22 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(6, 8);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 38);
+            this.button3.Size = new System.Drawing.Size(86, 35);
             this.button3.TabIndex = 2;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // panel_menus
+            // 
+            this.panel_menus.BackColor = System.Drawing.Color.Black;
+            this.panel_menus.Controls.Add(this.flowLayoutPanel1);
+            this.panel_menus.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_menus.Location = new System.Drawing.Point(0, 0);
+            this.panel_menus.Name = "panel_menus";
+            this.panel_menus.Size = new System.Drawing.Size(116, 459);
+            this.panel_menus.TabIndex = 21;
+            this.panel_menus.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_menus_Paint);
             // 
             // Pruebas
             // 
@@ -372,10 +401,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pruebas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel_menus.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_pruebas)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -386,19 +414,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel_menus.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel_menus;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dt_fecha;
@@ -410,7 +432,14 @@
         private System.Windows.Forms.Button bnt_agregar;
         private System.Windows.Forms.TextBox tb_cantidad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btn_actualizar;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.DataGridView dgv_pruebas;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -418,5 +447,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel_menus;
     }
 }

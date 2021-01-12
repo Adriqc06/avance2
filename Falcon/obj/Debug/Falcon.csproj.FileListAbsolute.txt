@@ -13,3 +13,8 @@ C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Principal.r
 C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Pruebas.resources
 C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Consultas_prueba.resources
 C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Consultas_paquetería.resources
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\ConexcionBD.dll
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csproj.CopyComplete
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\itextsharp.dll
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csproj.ResolveComReference.cache
