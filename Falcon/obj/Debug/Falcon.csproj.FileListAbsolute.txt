@@ -18,3 +18,4 @@ C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csproj.Copy
 C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\itextsharp.dll
 C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.csproj.ResolveComReference.cache
+C:\Users\Adriana Quijada\source\repos\Falcon\Falcon\obj\Debug\Falcon.Modulo_usuarios.resources

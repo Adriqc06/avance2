@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.desde);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(10, 102);
+            this.panel1.Location = new System.Drawing.Point(12, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 43);
             this.panel1.TabIndex = 25;
@@ -135,6 +135,7 @@
             // 
             // dgv_consultas2
             // 
+            this.dgv_consultas2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_consultas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_consultas2.Location = new System.Drawing.Point(10, 178);
             this.dgv_consultas2.Name = "dgv_consultas2";
@@ -168,6 +169,7 @@
             this.Name = "Consultas_paquetería";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";
+            this.Load += new System.EventHandler(this.Consultas_paquetería_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

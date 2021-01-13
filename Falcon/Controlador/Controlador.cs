@@ -12,7 +12,6 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using Falcon.Vistas;
 using Falcon.Modelo.Dto;
 using Falcon.Modelo;
 

@@ -9,8 +9,10 @@ using Falcon.Modelo.Dto;
 
 namespace Falcon.Modelo
 {
-    class DaoConsultaPruebas:Conexion
+    class DaoConsultaPruebas
     {
+        public SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-SOIGO22;Initial Catalog=Falcon;Integrated Security=True");
+
         SqlDataReader LeerFilas;
         SqlCommand Comando = new SqlCommand();
         //METODOS CRUD

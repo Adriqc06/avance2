@@ -47,6 +47,8 @@ namespace Falcon
 
         private void Paqueteria_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'falconDataSet4.Paqueteria' Puede moverla o quitarla según sea necesario.
+            this.paqueteriaTableAdapter.Fill(this.falconDataSet4.Paqueteria);
 
         }
 
@@ -91,22 +93,30 @@ namespace Falcon
             if (bd.executecommand(agregar))
             {
                 MessageBox.Show("Registro agregado correctamente");
+                tb_guia.Text = "";
+                dt_fecha2.Text = "";
+                cb_paqueteria2.Text = "";
+                tb_temperatura2.Text = "";
+                cb_proveedor2.Text = "";
+                tb_factura2.Text = "";
+                tb_paquetes2.Text = "";
             }
             else
             {
                 MessageBox.Show("Error al insertar");
             }
-            tb_guia.Text = "";
-            dt_fecha2.Text = "";
-            cb_paqueteria2.Text = "";
-            tb_temperatura2.Text = "";
-            cb_proveedor2.Text = "";
-            tb_factura2.Text = "";
-            tb_paquetes2.Text = "";
+          
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
+            panel3.Enabled = false;
+            panel8.Enabled = false;
+            panel10.Enabled = false;
+            button4.Enabled = false;
+            button2.Enabled = false;
+            bnt_agregar.Enabled = false;
+
             if (tb_guia.Text == "")
             {
                 MessageBox.Show("Introduzca un numero de guia para continuar");
@@ -115,16 +125,48 @@ namespace Falcon
             if (bd.executecommand(eliminar))
             {
                 MessageBox.Show("Registro eliminado correctamente");
-            }
-            else
-            {
-                MessageBox.Show("Error al eliminar");
+
+                tb_guia.Text = "";
+                panel3.Enabled = true;
+                panel8.Enabled = true;
+                panel10.Enabled = true;
+                button4.Enabled = true;
+                button2.Enabled = true;
+                bnt_agregar.Enabled = true;
+                dgv_paqueteria.DataSource = bd.SelectDataTable("select * from Paqueteria");
+
 
             }
-            tb_guia.Text = "";
+           
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            dgv_paqueteria.DataSource = bd.SelectDataTable("select * from Paqueteria");
+
+            panel3.Enabled = true;
+            panel8.Enabled = true;
+            panel10.Enabled = true;
+            button4.Enabled = true;
+            button2.Enabled = true;
+            bnt_agregar.Enabled = true;
+            btn_eliminar.Enabled = true;
+            tb_guia.Text = "";
+            dt_fecha2.Text = "";
+            cb_paqueteria2.Text = "";
+            tb_temperatura2.Text = "";
+            cb_proveedor2.Text = "";
+            tb_factura2.Text = "";
+            tb_paquetes2.Text = "";
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             tb_guia.Text = "";
             dt_fecha2.Text = "";
@@ -135,9 +177,37 @@ namespace Falcon
             tb_paquetes2.Text = "";
         }
 
-        private void btn_actualizar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            dgv_paqueteria.DataSource = bd.SelectDataTable("select * from Paqueteria");
+            panel3.Enabled = false;
+            panel8.Enabled = false;
+            btn_eliminar.Enabled = false;
+            button4.Enabled = false;
+            bnt_agregar.Enabled = false;
+
+            if (tb_guia.Text == "" && tb_paquetes2.Text == "")
+            {
+                MessageBox.Show("Introduzca un ID y la Cantidad a modificar para continuar ");
+            }
+            string actualizar = "update paqueteria set No_paquetes=" + tb_paquetes2.Text + "where Guia=" + tb_guia.Text;
+            if (bd.executecommand(actualizar))
+            {
+                MessageBox.Show("Registro actualizado correctamente");
+                dgv_paqueteria.DataSource = bd.SelectDataTable("select * from Paqueteria");
+
+                tb_guia.Text = "";
+                tb_paquetes2.Text = "";
+
+                panel3.Enabled = true;
+                panel8.Enabled = true;
+                btn_eliminar.Enabled = true;
+                button4.Enabled = true;
+                bnt_agregar.Enabled = true;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
 
         }
     }

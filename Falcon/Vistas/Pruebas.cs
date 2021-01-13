@@ -13,6 +13,7 @@ namespace Falcon
 {
     public partial class Pruebas : Form
     {
+
         public Pruebas()
         {
             InitializeComponent();
@@ -33,10 +34,7 @@ namespace Falcon
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            //Form6 ModForm = new Form6();
-            //this.Hide();
-            //ModForm.ShowDialog();
-            //this.Show();
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,6 +47,7 @@ namespace Falcon
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             Consultas_paquetería ModForm = new Consultas_paquetería();
             this.Hide();
             ModForm.ShowDialog();
@@ -109,25 +108,32 @@ namespace Falcon
 
         private void bnt_agregar_Click(object sender, EventArgs e)
         {
-
-            string agregar = "insert into prueba values(" + tb_id.Text + ",'" + dt_fecha.Text + "','"+cb_tipoprueba.Text+"',"+tb_cantidad.Text+")";
-            if (bd.executecommand(agregar))
+            if (tb_id.Text == "")
             {
-                MessageBox.Show("Registro agregado correctamente");
+                MessageBox.Show("Introduzca un ID para continuar");
+            }else {
+                string agregar = "insert into prueba values(" + tb_id.Text + ",'" + dt_fecha.Text + "','" + cb_tipoprueba.Text + "'," + tb_cantidad.Text + ")";
+                if (bd.executecommand(agregar))
+                {
+                    MessageBox.Show("Registro agregado correctamente");
+                    Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Error al insertar");
+                }
             }
-            else
-            {
-                MessageBox.Show("Error al insertar");
-            }
-            tb_id.Text = "";
-            dt_fecha.Text = "";
-            cb_tipoprueba.Text = "";
-            tb_cantidad.Text = "";
+           
         }
      
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
+            panel8.Enabled = false;
+            btn_modificar.Enabled = false;
+            btn_Limpiar.Enabled = false;
+            bnt_agregar.Enabled = false;
+
             if (tb_id.Text == "")
             {
                 MessageBox.Show("Introduzca un ID para continuar");
@@ -136,26 +142,19 @@ namespace Falcon
             if (bd.executecommand(eliminar))
             {
                 MessageBox.Show("Registro eliminado correctamente");
+                Refresh();
             }
-            else
-            {
-                MessageBox.Show("Error al eliminar");
-            }
-            tb_id.Text = "";
+           
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
-            tb_id.Text = "";
-            dt_fecha.Text = "";
-            cb_tipoprueba.Text = "";
-            tb_cantidad.Text = "";
+           
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-
-            dgv_pruebas.DataSource = bd.SelectDataTable("select * from prueba");
+            Refresh();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -186,14 +185,67 @@ namespace Falcon
 
         }
 
-        private void dgv_pruebas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+      private void dgv_pruebas_CellContentClick(object sender, DataGridViewCellEventArgs e)   
         {
-
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void Pruebas_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'falconDataSet3.Prueba' Puede moverla o quitarla según sea necesario.
+            this.pruebaTableAdapter.Fill(this.falconDataSet3.Prueba);
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            panel3.Enabled = false;
+            btn_eliminar.Enabled = false;
+            btn_Limpiar.Enabled = false;
+            bnt_agregar.Enabled = false;
+
+            if (tb_id.Text == "" && tb_cantidad.Text=="")
+            {
+                MessageBox.Show("Introduzca un ID y la Cantidad a modificar para continuar ");
+
+            }
+            string actualizar = "update prueba set Cantidad=" + tb_cantidad.Text + "where ID=" + tb_id.Text;
+            if (bd.executecommand(actualizar))
+            {
+                MessageBox.Show("Registro actualizado correctamente");
+                Refresh();
+            }
+           
+        }
+
+        private void btn_Limpiar_Click_1(object sender, EventArgs e)
+        {
+            tb_id.Text = "";
+            dt_fecha.Text = "";
+            cb_tipoprueba.Text = "";
+            tb_cantidad.Text = "";
+
+        }
+
+        //VALIDACIONES
+        public void Refresh()
+        {
+            tb_id.Text = "";
+            dt_fecha.Text = "";
+            cb_tipoprueba.Text = "";
+            tb_cantidad.Text = "";
+            dgv_pruebas.DataSource = bd.SelectDataTable("select * from prueba");
+            panel8.Enabled = true;
+            panel3.Enabled = true;
+            btn_modificar.Enabled = true;
+            btn_Limpiar.Enabled = true;
+            bnt_agregar.Enabled = true;
+            btn_eliminar.Enabled = true;
+        }
+
     }
 }

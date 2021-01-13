@@ -62,6 +62,7 @@
             // 
             // dgv_consultas
             // 
+            this.dgv_consultas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_consultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_consultas.Location = new System.Drawing.Point(12, 174);
             this.dgv_consultas.Name = "dgv_consultas";
