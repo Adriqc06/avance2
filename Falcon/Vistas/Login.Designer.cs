@@ -38,8 +38,10 @@
             this.entrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +49,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Script MT Bold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(421, 9);
+            this.label1.Location = new System.Drawing.Point(421, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 58);
             this.label1.TabIndex = 0;
@@ -139,6 +141,18 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "*";
             // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.BackColor = System.Drawing.Color.Transparent;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(674, 0);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(30, 30);
+            this.MinimizarBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MinimizarBtn.TabIndex = 9;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +161,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(705, 363);
+            this.Controls.Add(this.MinimizarBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.entrar);
@@ -164,6 +179,7 @@
             this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +196,6 @@
         private System.Windows.Forms.Button entrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox MinimizarBtn;
     }
 }

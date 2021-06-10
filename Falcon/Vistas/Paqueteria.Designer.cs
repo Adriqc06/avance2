@@ -46,7 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tb_temperatura2 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dgv_paqueteria = new System.Windows.Forms.DataGridView();
             this.guiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +63,7 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.bnt_agregar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tb_paquetes2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,9 +76,11 @@
             this.tb_guia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.paqueteriaTableAdapter = new Falcon.FalconDataSet4TableAdapters.PaqueteriaTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
+            this.BarraTituloPnl = new System.Windows.Forms.Panel();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             this.panel_menus.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -87,7 +89,6 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paqueteria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paqueteriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.falconDataSet4)).BeginInit();
@@ -96,7 +97,10 @@
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.BarraTituloPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_menus
@@ -106,7 +110,7 @@
             this.panel_menus.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menus.Location = new System.Drawing.Point(0, 0);
             this.panel_menus.Name = "panel_menus";
-            this.panel_menus.Size = new System.Drawing.Size(112, 466);
+            this.panel_menus.Size = new System.Drawing.Size(112, 533);
             this.panel_menus.TabIndex = 22;
             // 
             // flowLayoutPanel1
@@ -116,9 +120,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 0);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(106, 462);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(116, 533);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel7
@@ -188,16 +193,14 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.GhostWhite;
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.dgv_paqueteria);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(112, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(773, 466);
+            this.panel2.Size = new System.Drawing.Size(773, 533);
             this.panel2.TabIndex = 23;
             // 
             // panel3
@@ -208,7 +211,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.tb_temperatura2);
-            this.panel3.Location = new System.Drawing.Point(3, 141);
+            this.panel3.Location = new System.Drawing.Point(3, 200);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(327, 116);
             this.panel3.TabIndex = 18;
@@ -270,17 +273,6 @@
             this.tb_temperatura2.Size = new System.Drawing.Size(100, 20);
             this.tb_temperatura2.TabIndex = 10;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(731, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 30;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // dgv_paqueteria
             // 
             this.dgv_paqueteria.AutoGenerateColumns = false;
@@ -295,7 +287,7 @@
             this.facturaDataGridViewTextBoxColumn,
             this.nopaquetesDataGridViewTextBoxColumn});
             this.dgv_paqueteria.DataSource = this.paqueteriaBindingSource;
-            this.dgv_paqueteria.Location = new System.Drawing.Point(10, 258);
+            this.dgv_paqueteria.Location = new System.Drawing.Point(10, 317);
             this.dgv_paqueteria.Name = "dgv_paqueteria";
             this.dgv_paqueteria.Size = new System.Drawing.Size(724, 204);
             this.dgv_paqueteria.TabIndex = 29;
@@ -359,7 +351,7 @@
             this.panel6.Controls.Add(this.btn_actualizar);
             this.panel6.Controls.Add(this.btn_eliminar);
             this.panel6.Controls.Add(this.bnt_agregar);
-            this.panel6.Location = new System.Drawing.Point(643, 52);
+            this.panel6.Location = new System.Drawing.Point(643, 111);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(100, 202);
             this.panel6.TabIndex = 28;
@@ -436,10 +428,22 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.tb_guia);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Location = new System.Drawing.Point(3, 110);
+            this.panel5.Location = new System.Drawing.Point(3, 169);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(634, 147);
             this.panel5.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.GhostWhite;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(234, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 24);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "*";
             // 
             // panel10
             // 
@@ -547,7 +551,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(253, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(253, 59);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(202, 115);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -555,13 +559,26 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(743, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 30;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -570,24 +587,38 @@
             // 
             this.paqueteriaTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // BarraTituloPnl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.GhostWhite;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(234, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 24);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "*";
+            this.BarraTituloPnl.BackColor = System.Drawing.Color.GhostWhite;
+            this.BarraTituloPnl.Controls.Add(this.MinimizarBtn);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox4);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox2);
+            this.BarraTituloPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTituloPnl.Location = new System.Drawing.Point(112, 0);
+            this.BarraTituloPnl.Name = "BarraTituloPnl";
+            this.BarraTituloPnl.Size = new System.Drawing.Size(773, 30);
+            this.BarraTituloPnl.TabIndex = 24;
+            this.BarraTituloPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTituloPnl_MouseDown);
+            // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(713, 0);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(30, 30);
+            this.MinimizarBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MinimizarBtn.TabIndex = 31;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
             // 
             // Paqueteria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(885, 466);
+            this.ClientSize = new System.Drawing.Size(885, 533);
+            this.Controls.Add(this.BarraTituloPnl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_menus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -603,7 +634,6 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paqueteria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paqueteriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.falconDataSet4)).EndInit();
@@ -615,7 +645,10 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.BarraTituloPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -671,5 +704,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel BarraTituloPnl;
+        private System.Windows.Forms.PictureBox MinimizarBtn;
     }
 }

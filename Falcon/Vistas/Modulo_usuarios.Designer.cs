@@ -52,12 +52,16 @@ namespace Falcon
             this.usuariosTableAdapter = new Falcon.FalconDataSet6TableAdapters.UsuariosTableAdapter();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.BarraTituloPnl = new System.Windows.Forms.Panel();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.falconDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.BarraTituloPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,7 +72,7 @@ namespace Falcon
             this.panel1.Controls.Add(this.tb_usuario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 290);
+            this.panel1.Location = new System.Drawing.Point(12, 339);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(539, 119);
             this.panel1.TabIndex = 33;
@@ -141,7 +145,7 @@ namespace Falcon
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(640, 195);
+            this.button3.Location = new System.Drawing.Point(640, 244);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 30);
             this.button3.TabIndex = 31;
@@ -154,7 +158,7 @@ namespace Falcon
             this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(640, 159);
+            this.button2.Location = new System.Drawing.Point(640, 208);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 30);
             this.button2.TabIndex = 30;
@@ -167,7 +171,7 @@ namespace Falcon
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(640, 123);
+            this.button1.Location = new System.Drawing.Point(640, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 30);
             this.button1.TabIndex = 29;
@@ -179,7 +183,7 @@ namespace Falcon
             // 
             this.lbl_usuarios.AutoSize = true;
             this.lbl_usuarios.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuarios.Location = new System.Drawing.Point(15, 106);
+            this.lbl_usuarios.Location = new System.Drawing.Point(15, 155);
             this.lbl_usuarios.Name = "lbl_usuarios";
             this.lbl_usuarios.Size = new System.Drawing.Size(144, 18);
             this.lbl_usuarios.TabIndex = 28;
@@ -195,7 +199,7 @@ namespace Falcon
             this.passwordDataGridViewTextBoxColumn,
             this.tipousuarioDataGridViewTextBoxColumn});
             this.dgv_usuarios.DataSource = this.usuariosBindingSource;
-            this.dgv_usuarios.Location = new System.Drawing.Point(12, 125);
+            this.dgv_usuarios.Location = new System.Drawing.Point(12, 174);
             this.dgv_usuarios.Name = "dgv_usuarios";
             this.dgv_usuarios.Size = new System.Drawing.Size(610, 159);
             this.dgv_usuarios.TabIndex = 27;
@@ -234,7 +238,7 @@ namespace Falcon
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(267, -9);
+            this.pictureBox1.Location = new System.Drawing.Point(267, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(233, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -247,11 +251,12 @@ namespace Falcon
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(759, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(758, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 34;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -261,7 +266,7 @@ namespace Falcon
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(640, 231);
+            this.button4.Location = new System.Drawing.Point(640, 280);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(122, 30);
             this.button4.TabIndex = 35;
@@ -269,14 +274,37 @@ namespace Falcon
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // BarraTituloPnl
+            // 
+            this.BarraTituloPnl.Controls.Add(this.MinimizarBtn);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox4);
+            this.BarraTituloPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTituloPnl.Location = new System.Drawing.Point(0, 0);
+            this.BarraTituloPnl.Name = "BarraTituloPnl";
+            this.BarraTituloPnl.Size = new System.Drawing.Size(788, 30);
+            this.BarraTituloPnl.TabIndex = 36;
+            this.BarraTituloPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTituloPnl_MouseDown);
+            // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(728, 0);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(30, 30);
+            this.MinimizarBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MinimizarBtn.TabIndex = 37;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
+            // 
             // Modulo_usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(788, 419);
+            this.ClientSize = new System.Drawing.Size(788, 471);
+            this.Controls.Add(this.BarraTituloPnl);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -296,6 +324,8 @@ namespace Falcon
             ((System.ComponentModel.ISupportInitialize)(this.falconDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.BarraTituloPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +353,7 @@ namespace Falcon
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox tb_pass;
         public System.Windows.Forms.TextBox tb_usuario;
+        private System.Windows.Forms.Panel BarraTituloPnl;
+        private System.Windows.Forms.PictureBox MinimizarBtn;
     }
 }

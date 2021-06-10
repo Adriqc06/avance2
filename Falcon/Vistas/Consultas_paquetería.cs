@@ -14,6 +14,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Falcon.Controlador;
 using Falcon.Modelo;
+using System.Runtime.InteropServices;
 
 
 namespace Falcon
@@ -27,20 +28,17 @@ namespace Falcon
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hand, int wnsg, int wparam, int lparam);
 
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Consultas_prueba ModForm = new Consultas_prueba();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -71,9 +69,15 @@ namespace Falcon
             cosa.ExportarDatos(dgv_consultas2);
         }
 
-        private void Consultas_paquetería_Load(object sender, EventArgs e)
+        private void MinimizarBtn_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void BarraTituloPnl_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

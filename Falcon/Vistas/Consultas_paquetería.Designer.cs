@@ -39,19 +39,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_consultas2 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BarraTituloPnl = new System.Windows.Forms.Panel();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_consultas2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BarraTituloPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(715, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(716, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -61,7 +66,7 @@
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(612, 102);
+            this.button1.Location = new System.Drawing.Point(612, 149);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 30);
             this.button1.TabIndex = 29;
@@ -74,7 +79,7 @@
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(612, 138);
+            this.button3.Location = new System.Drawing.Point(612, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 33);
             this.button3.TabIndex = 28;
@@ -88,7 +93,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.desde);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 126);
+            this.panel1.Location = new System.Drawing.Point(12, 173);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 43);
             this.panel1.TabIndex = 25;
@@ -137,29 +142,51 @@
             // 
             this.dgv_consultas2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_consultas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_consultas2.Location = new System.Drawing.Point(10, 178);
+            this.dgv_consultas2.Location = new System.Drawing.Point(10, 225);
             this.dgv_consultas2.Name = "dgv_consultas2";
             this.dgv_consultas2.Size = new System.Drawing.Size(724, 243);
             this.dgv_consultas2.TabIndex = 24;
-            this.dgv_consultas2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(278, -9);
+            this.pictureBox1.Location = new System.Drawing.Point(278, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // BarraTituloPnl
+            // 
+            this.BarraTituloPnl.Controls.Add(this.MinimizarBtn);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox4);
+            this.BarraTituloPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTituloPnl.Location = new System.Drawing.Point(0, 0);
+            this.BarraTituloPnl.Name = "BarraTituloPnl";
+            this.BarraTituloPnl.Size = new System.Drawing.Size(746, 30);
+            this.BarraTituloPnl.TabIndex = 32;
+            this.BarraTituloPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTituloPnl_MouseDown);
+            // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(686, 0);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(30, 30);
+            this.MinimizarBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MinimizarBtn.TabIndex = 33;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
+            // 
             // Consultas_paquetería
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(746, 428);
-            this.Controls.Add(this.pictureBox4);
+            this.ClientSize = new System.Drawing.Size(746, 487);
+            this.Controls.Add(this.BarraTituloPnl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
@@ -169,12 +196,13 @@
             this.Name = "Consultas_paquetería";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar";
-            this.Load += new System.EventHandler(this.Consultas_paquetería_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_consultas2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.BarraTituloPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,5 +219,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_consultas2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel BarraTituloPnl;
+        private System.Windows.Forms.PictureBox MinimizarBtn;
     }
 }

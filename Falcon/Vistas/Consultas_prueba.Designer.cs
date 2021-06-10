@@ -44,16 +44,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_calcular = new System.Windows.Forms.Button();
+            this.BarraTituloPnl = new System.Windows.Forms.Panel();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_consultas)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.BarraTituloPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(277, -12);
+            this.pictureBox1.Location = new System.Drawing.Point(277, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 129);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,7 +68,7 @@
             // 
             this.dgv_consultas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.dgv_consultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_consultas.Location = new System.Drawing.Point(12, 174);
+            this.dgv_consultas.Location = new System.Drawing.Point(12, 228);
             this.dgv_consultas.Name = "dgv_consultas";
             this.dgv_consultas.Size = new System.Drawing.Size(724, 215);
             this.dgv_consultas.TabIndex = 15;
@@ -138,7 +142,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cb_tipoprueba);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(12, 98);
+            this.panel1.Location = new System.Drawing.Point(12, 152);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(586, 70);
             this.panel1.TabIndex = 16;
@@ -148,7 +152,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(8, 397);
+            this.label3.Location = new System.Drawing.Point(8, 451);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 21);
             this.label3.TabIndex = 18;
@@ -157,7 +161,7 @@
             // tb_cantidad
             // 
             this.tb_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_cantidad.Location = new System.Drawing.Point(211, 395);
+            this.tb_cantidad.Location = new System.Drawing.Point(211, 449);
             this.tb_cantidad.Name = "tb_cantidad";
             this.tb_cantidad.Size = new System.Drawing.Size(61, 26);
             this.tb_cantidad.TabIndex = 19;
@@ -167,7 +171,7 @@
             this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(614, 135);
+            this.button3.Location = new System.Drawing.Point(614, 189);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 33);
             this.button3.TabIndex = 20;
@@ -180,7 +184,7 @@
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(614, 98);
+            this.button1.Location = new System.Drawing.Point(614, 152);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 30);
             this.button1.TabIndex = 21;
@@ -190,11 +194,12 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(717, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(718, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 22;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -204,7 +209,7 @@
             this.btn_calcular.BackColor = System.Drawing.Color.Black;
             this.btn_calcular.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(287, 392);
+            this.btn_calcular.Location = new System.Drawing.Point(287, 446);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(73, 33);
             this.btn_calcular.TabIndex = 24;
@@ -212,14 +217,37 @@
             this.btn_calcular.UseVisualStyleBackColor = false;
             this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
+            // BarraTituloPnl
+            // 
+            this.BarraTituloPnl.Controls.Add(this.MinimizarBtn);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox4);
+            this.BarraTituloPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTituloPnl.Location = new System.Drawing.Point(0, 0);
+            this.BarraTituloPnl.Name = "BarraTituloPnl";
+            this.BarraTituloPnl.Size = new System.Drawing.Size(748, 30);
+            this.BarraTituloPnl.TabIndex = 25;
+            this.BarraTituloPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTituloPnl_MouseDown);
+            // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(688, 0);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(30, 30);
+            this.MinimizarBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MinimizarBtn.TabIndex = 26;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
+            // 
             // Consultas_prueba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(748, 432);
+            this.ClientSize = new System.Drawing.Size(748, 497);
+            this.Controls.Add(this.BarraTituloPnl);
             this.Controls.Add(this.btn_calcular);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tb_cantidad);
@@ -237,6 +265,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.BarraTituloPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +288,7 @@
         public System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.Button btn_calcular;
         public System.Windows.Forms.ComboBox cb_tipoprueba;
+        private System.Windows.Forms.Panel BarraTituloPnl;
+        private System.Windows.Forms.PictureBox MinimizarBtn;
     }
 }

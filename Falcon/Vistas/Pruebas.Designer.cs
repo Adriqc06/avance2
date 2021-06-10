@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pruebas));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dgv_pruebas = new System.Windows.Forms.DataGridView();
@@ -47,6 +46,7 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.bnt_agregar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cb_tipoprueba = new System.Windows.Forms.ComboBox();
@@ -68,8 +68,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel_menus = new System.Windows.Forms.Panel();
             this.pruebaTableAdapter = new Falcon.FalconDataSet3TableAdapters.PruebaTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BarraTituloPnl = new System.Windows.Forms.Panel();
+            this.MinimizarBtn = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pruebas)).BeginInit();
@@ -87,42 +87,32 @@
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel_menus.SuspendLayout();
+            this.BarraTituloPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(701, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.dgv_pruebas);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(116, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(773, 459);
+            this.panel2.Size = new System.Drawing.Size(773, 536);
             this.panel2.TabIndex = 22;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(736, 9);
+            this.pictureBox4.Location = new System.Drawing.Point(743, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(25, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -138,7 +128,7 @@
             this.tipoPruebaDataGridViewTextBoxColumn,
             this.cantidadDataGridViewTextBoxColumn});
             this.dgv_pruebas.DataSource = this.pruebaBindingSource;
-            this.dgv_pruebas.Location = new System.Drawing.Point(19, 251);
+            this.dgv_pruebas.Location = new System.Drawing.Point(16, 301);
             this.dgv_pruebas.Name = "dgv_pruebas";
             this.dgv_pruebas.Size = new System.Drawing.Size(727, 205);
             this.dgv_pruebas.TabIndex = 5;
@@ -189,7 +179,7 @@
             this.panel6.Controls.Add(this.btn_actualizar);
             this.panel6.Controls.Add(this.btn_eliminar);
             this.panel6.Controls.Add(this.bnt_agregar);
-            this.panel6.Location = new System.Drawing.Point(500, 109);
+            this.panel6.Location = new System.Drawing.Point(497, 159);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(209, 139);
             this.panel6.TabIndex = 4;
@@ -265,10 +255,22 @@
             this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.tb_id);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(61, 103);
+            this.panel5.Location = new System.Drawing.Point(58, 153);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(418, 145);
             this.panel5.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.GhostWhite;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(273, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 24);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "*";
             // 
             // panel8
             // 
@@ -375,7 +377,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(274, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(271, 50);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(205, 116);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -384,11 +386,12 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -400,9 +403,10 @@
             this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 0);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(106, 458);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(116, 536);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // panel7
@@ -476,7 +480,7 @@
             this.panel_menus.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menus.Location = new System.Drawing.Point(0, 0);
             this.panel_menus.Name = "panel_menus";
-            this.panel_menus.Size = new System.Drawing.Size(116, 459);
+            this.panel_menus.Size = new System.Drawing.Size(116, 536);
             this.panel_menus.TabIndex = 21;
             this.panel_menus.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_menus_Paint);
             // 
@@ -484,33 +488,45 @@
             // 
             this.pruebaTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // BarraTituloPnl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.GhostWhite;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(273, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 24);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "*";
+            this.BarraTituloPnl.BackColor = System.Drawing.Color.GhostWhite;
+            this.BarraTituloPnl.Controls.Add(this.MinimizarBtn);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox4);
+            this.BarraTituloPnl.Controls.Add(this.pictureBox2);
+            this.BarraTituloPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTituloPnl.Location = new System.Drawing.Point(116, 0);
+            this.BarraTituloPnl.Name = "BarraTituloPnl";
+            this.BarraTituloPnl.Size = new System.Drawing.Size(773, 30);
+            this.BarraTituloPnl.TabIndex = 23;
+            this.BarraTituloPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTituloPnl_MouseDown);
+            // 
+            // MinimizarBtn
+            // 
+            this.MinimizarBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MinimizarBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarBtn.Image")));
+            this.MinimizarBtn.Location = new System.Drawing.Point(713, 0);
+            this.MinimizarBtn.Name = "MinimizarBtn";
+            this.MinimizarBtn.Size = new System.Drawing.Size(30, 30);
+            this.MinimizarBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.MinimizarBtn.TabIndex = 7;
+            this.MinimizarBtn.TabStop = false;
+            this.MinimizarBtn.Click += new System.EventHandler(this.MinimizarBtn_Click);
             // 
             // Pruebas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(889, 459);
+            this.ClientSize = new System.Drawing.Size(889, 536);
+            this.Controls.Add(this.BarraTituloPnl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_menus);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pruebas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pruebas";
             this.Load += new System.EventHandler(this.Pruebas_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pruebas)).EndInit();
@@ -531,12 +547,13 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel_menus.ResumeLayout(false);
+            this.BarraTituloPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dt_fecha;
@@ -575,5 +592,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel BarraTituloPnl;
+        private System.Windows.Forms.PictureBox MinimizarBtn;
     }
 }

@@ -52,5 +52,10 @@ namespace Falcon
         {
 
         }
+
+        private void MinimizarBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

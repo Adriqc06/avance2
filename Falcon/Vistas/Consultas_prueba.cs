@@ -14,6 +14,8 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Falcon.Controlador;
 using Falcon.Modelo;
+using System.Runtime.InteropServices;
+
 
 
 
@@ -26,6 +28,12 @@ namespace Falcon
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hand, int wnsg, int wparam, int lparam);
+
         //BaseDeDatos bd = new BaseDeDatos();
         private void Consultas_prueba_Load(object sender, EventArgs e)
         {
@@ -83,6 +91,17 @@ namespace Falcon
                 total += Convert.ToInt32(row.Cells["Cantidad"].Value);
             }
             tb_cantidad.Text = Convert.ToString(total);
+        }
+
+        private void MinimizarBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BarraTituloPnl_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

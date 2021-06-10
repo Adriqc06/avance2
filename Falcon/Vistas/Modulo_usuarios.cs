@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+
 
 namespace Falcon
 {
@@ -17,6 +19,12 @@ namespace Falcon
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hand, int wnsg, int wparam, int lparam);
+
         BaseDeDatos bd = new BaseDeDatos();
 
         private void Modulo_usuarios_Load(object sender, EventArgs e)
@@ -147,5 +155,15 @@ namespace Falcon
             dgv_usuarios.DataSource = bd.SelectDataTable("select * from usuarios");
         }
 
+        private void MinimizarBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void BarraTituloPnl_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

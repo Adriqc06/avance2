@@ -1099,6 +1099,17 @@
         bMjkAmRyATI5Af/Z
 </value>
   </data>
+  <data name="MinimizarBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJ
+        TUUH5QYBAysuFUH8qwAAAPZJREFUSEvtkVtuwyAQRcdvgx+42WM+8tU6SaVK3XzPnRorewgjHTMw98KA
+        rUSJEu8U27Y54zjaMAyO8mmabFkWZ11XSymdaE2atm2t6zrr+959IYRTn0fhmwkMfdM0oyAfMbHPf2B2
+        clALaEJVVaGuawdf5MCIbj6YYow1mOnDQsR0RfgLP/ANzxce1B9scqfrnXFnfhfUxA5fHPZ5zJ/UbvRz
+        0Q3zTSomCS4UPthoQ5QQixXzqpH6QkOveNd4ZjwTmog26obkun1Fzc73Y8FvpUOVqwO9td4cg4+q6Z/k
+        t87Ir1rW06DnWp/n+fj7JUqUeIcw+wPMLxZqN8x9cwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsN
